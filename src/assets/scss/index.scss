@@ -1,0 +1,9 @@
+@import "varibles";
+@import "~tanbo-ui-native/bundles/assets/scss/custom-index";
+@import "~tanbo-ui-native/bundles/assets/fonts/style.css";
+
+button, input[type=button], input[type=submit] {
+    -webkit-appearance: none !important;
+    background: none;
+    border: none;
+}

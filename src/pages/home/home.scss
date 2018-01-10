@@ -1,0 +1,81 @@
+@import "../../assets/scss/varibles";
+
+ui-content {
+    font-size: 12px;
+}
+
+ui-slide {
+    overflow: hidden;
+    height: 2.14rem;
+}
+
+ui-slide-item {
+    img {
+        width: 100%;
+    }
+}
+
+ui-flex {
+    padding-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    button {
+        color: inherit;
+    }
+    .icon-wrap {
+        border: 1px solid $color-dark;
+        //background-color: $color-primary;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        line-height: 34px;
+    }
+    p {
+        margin-top: 4px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+
+.row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .col-6 {
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+ui-list {
+    ui-list-inner {
+        font-size: 14px;
+        overflow: hidden;
+        div {
+            flex: 1;
+            overflow: hidden;
+        }
+        button {
+            width: 40px;
+            font-size: 20px;
+            color: $color-gray;
+            padding: 0;
+            text-align: right;
+        }
+    }
+    h4, p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0;
+        color: $color-dark;
+    }
+}
+
+ui-list-thumbnail img {
+    width: 50px;
+    height: 50px;
+}
