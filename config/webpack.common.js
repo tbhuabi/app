@@ -1,6 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const AddAssetsWebpackPlugin = require('add-assets-webpack-plugin');
+const InsertScriptWebpackPlugin = require('insert-script-webpack-plugin');
+
 const globalConfig = require('../global.config');
 const cssConfig = require('./css-config.json');
 const cssTest = require('./css-test');
@@ -103,6 +106,16 @@ module.exports = {
         }]
     },
     plugins: [
+        new AddAssetsWebpackPlugin({
+            filePath: "static/custom.js",
+            content: 'eruda.init();'
+        }),
+        new InsertScriptWebpackPlugin({
+            paths: [
+                '//cdn.jsdelivr.net/npm/eruda',
+                '/static/custom.js'
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(appPath, 'index.html'),
             favicon: path.resolve(appPath, 'assets/images/favicon.ico'),
